@@ -1,0 +1,19 @@
+{
+  "note": "This project has been migrated from shadcn/ui to Ant Design. The UI components in src/components/ui/ now use Ant Design instead of shadcn components.",
+  "framework": "Ant Design + React + TypeScript",
+  "styling": "Tailwind CSS + Ant Design Theme",
+  "animations": "Framer Motion",
+  "previous_setup": {
+    "style": "new-york",
+    "rsc": false,
+    "tsx": true,
+    "tailwind": {
+      "config": "",
+      "css": "src/index.css",
+      "baseColor": "neutral",
+      "cssVariables": true,
+      "prefix": ""
+    },
+    "iconLibrary": "lucide"
+  }
+}
