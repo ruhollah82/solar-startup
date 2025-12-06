@@ -22,8 +22,8 @@ import {
   Users,
   Award,
 } from "lucide-react";
-import { Button } from "../ui/button";
 import { useTranslation } from "../../contexts/TranslationContext";
+import { Button } from "antd";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -133,61 +133,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Newsletter Section */}
         <div className="container mx-auto px-4 md:px-6 py-16 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-orange-500/10 to-amber-500/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-500/20 mb-16"
-          >
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
-                <Sparkles className="h-4 w-4 text-white" />
-                <span className="text-sm font-medium">به‌روزرسانی‌ها</span>
-              </div>
-
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                در خبرنامه انرژی پاک عضو شوید
-              </h3>
-
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                آخرین اخبار، فناوری‌ها و تخفیف‌های ویژه را در ایمیل خود دریافت
-                کنید
-              </p>
-
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
-              >
-                <div className="flex-1 relative">
-                  <Mail className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="ایمیل خود را وارد کنید"
-                    className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-14 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none transition-all"
-                    required
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="bg-gradient-to-r from-orange-500 to-amber-500 hover:shadow-xl hover:shadow-orange-500/25 px-8 py-4 gap-2"
-                >
-                  <Send className="h-5 w-5" />
-                  عضو شوید
-                </Button>
-              </form>
-
-              <p className="text-sm text-gray-400 mt-4">
-                با عضویت، با{" "}
-                <span className="text-orange-400">سیاست حریم خصوصی</span> ما
-                موافقت می‌کنید
-              </p>
-            </div>
-          </motion.div>
-
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
             {/* Company Info */}
@@ -348,40 +294,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* Stats Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 mb-8"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { label: "پروژه تکمیل شده", value: "۱۵۰+", icon: Award },
-                { label: "مشتری راضی", value: "۲۵K+", icon: Users },
-                { label: "ظرفیت نصب شده", value: "۵۰۰MW", icon: Battery },
-                { label: "سال تجربه", value: "۱۵+", icon: Clock },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="flex justify-center mb-2">
-                    <stat.icon className="h-8 w-8 text-orange-500" />
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
 
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8">

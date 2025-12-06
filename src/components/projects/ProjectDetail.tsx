@@ -18,8 +18,8 @@ import {
   Grid,
 } from "lucide-react";
 import type { Project } from "../../types";
-import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
+import { Button } from "antd";
 
 interface ProjectDetailProps {
   project: Project;

@@ -13,8 +13,9 @@ import {
   Shield,
   Globe,
 } from "lucide-react";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 import { useTranslation } from "../../contexts/TranslationContext";
+import { Button } from "antd";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

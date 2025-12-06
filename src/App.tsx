@@ -13,7 +13,7 @@ function App() {
       <div className="min-h-screen">
         <Navbar />
         <AnimatePresence mode="wait">
-          <main className="container mx-auto px-4 pt-20 pb-16">
+          <main className="container mx-auto px-4 pt-32 lg:pt-36 pb-16">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/gallery" element={<Gallery />} />

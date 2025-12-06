@@ -43,7 +43,7 @@ export const solarTheme: ThemeConfig = {
 
     // Font settings - Modern typography scale
     fontFamily:
-      '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      '"Vazir","Vazirmatn","Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
     fontSize: 15,
     fontSizeHeading1: 48,
     fontSizeHeading2: 36,

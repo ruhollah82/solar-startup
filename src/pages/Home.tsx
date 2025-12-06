@@ -21,9 +21,9 @@ import {
 import HeroSlider from "../components/home/HeroSlider";
 import ProjectCard from "../components/home/ProjectCard";
 import { useProjectStore } from "../store/projectStore";
-import { Button } from "../components/ui/button";
 import { useTranslation } from "../contexts/TranslationContext";
 import { useState, useEffect } from "react";
+import { Button } from "antd";
 
 const Home = () => {
   const { getFeaturedProjects } = useProjectStore();

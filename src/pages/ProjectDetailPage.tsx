@@ -17,9 +17,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useProjectStore } from "../store/projectStore";
-import { Button } from "../components/ui/button";
 import ProjectDetail from "../components/projects/ProjectDetail";
 import { useState } from "react";
+import { Button } from "antd";
 
 const ProjectDetailPage = () => {
   const { id } = useParams();
@@ -118,7 +118,7 @@ const ProjectDetailPage = () => {
       <motion.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200"
+        className="  bg-white/80 backdrop-blur-md border-b border-gray-200"
       >
         <div className="container mx-auto px-4 md:px-6 py-4">
           <div className="flex items-center justify-between">
@@ -139,16 +139,16 @@ const ProjectDetailPage = () => {
 
             <div className="flex items-center gap-3">
               <Button
-                variant="ghost"
-                size="sm"
+                variant="outlined"
+                size="small"
                 className="text-gray-600 hover:text-gray-900"
               >
                 <Share2 className="h-4 w-4 mr-2" />
                 <span className="hidden sm:inline">Share</span>
               </Button>
               <Button
-                variant="ghost"
-                size="sm"
+                variant="outlined"
+                size="small"
                 className="text-gray-600 hover:text-gray-900"
               >
                 <Download className="h-4 w-4 mr-2" />

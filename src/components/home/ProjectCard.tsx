@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Battery, Home, Zap, MapPin } from "lucide-react";
 import { Card, CardContent, CardFooter } from "../ui/card";
-import { Badge } from "../ui/badge";
+// import { Badge } from "../ui/badge";
 import { useTranslation } from "../../contexts/TranslationContext";
 
 interface ProjectCardProps {
@@ -66,14 +66,7 @@ const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
               className="absolute top-3 right-3"
-            >
-              <Badge
-                variant={project.status === "Completed" ? "filled" : "outlined"}
-                className="bg-green-500 hover:bg-green-600 text-white shadow-lg backdrop-blur-sm"
-              >
-                {project.status}
-              </Badge>
-            </motion.div>
+            ></motion.div>
 
             {/* Animated overlay with energy icon */}
             <motion.div
